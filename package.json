@@ -1,12 +1,11 @@
 {
   "name": "@rokii/api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Utilities for Rokii plugin developers",
   "types": "dist/index.d.ts",
   "files": [
-    "dist",
-    "assets"
+    "dist"
   ],
   "scripts": {
     "build": "rimraf dist && tsc"
