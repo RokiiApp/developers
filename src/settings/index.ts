@@ -1,0 +1,42 @@
+export type SettingsSchema = {
+  locale: string;
+  lang: string;
+  country: string;
+  theme: string;
+  hotkey: string;
+  showInTray: boolean;
+  firstStart: boolean;
+  developerMode: boolean;
+  cleanOnHide: boolean;
+  selectOnShow: boolean;
+  hideOnBlur: boolean;
+  plugins: Record<string, unknown>;
+  isMigratedPlugins: boolean;
+  openAtLogin: boolean;
+  winPosition: [x: number, y: number];
+  proxy?: string;
+};
+
+/**
+ * Get a value from global configuration
+*/
+export type SettingsGetter = <T extends keyof SettingsSchema>(key: T) => SettingsSchema[T]
+
+/**
+ * Write a value to global config. It immedately rewrites global config
+ * and notifies all listeners about changes
+ */
+export type SettingsSetter = <T extends keyof SettingsSchema>(key: T, value: SettingsSchema[T]) => void
+
+export type SettingsHandler = {
+  /**
+   * Get a value from global configuration
+  */
+  get: SettingsGetter;
+
+  /**
+   * Write a value to global config. It immedately rewrites global config
+   * and notifies all listeners about changes
+   */
+  set: SettingsSetter;
+}
