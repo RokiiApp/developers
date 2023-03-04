@@ -1,45 +1,20 @@
 {
-  "name": "@rokii/api",
-  "version": "1.0.1",
-  "type": "module",
-  "description": "Utilities for Rokii plugin developers",
-  "repository": "RokiiApp/developers",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
+  "name": "rokii-developers",
+  "private": true,
+  "description": "Utilities for Rokii Developers",
+  "workspaces": [
+    "packages/*"
   ],
-  "scripts": {
-    "build": "rimraf dist && tsc"
-  },
   "keywords": [],
   "author": "David Jiménez",
   "license": "MIT",
-  "dependencies": {
-    "@types/node": "18.8.3",
-    "@types/react": "18.0.9",
-    "react": "18.1.0"
-  },
-  "peerDependencies": {
-    "@types/node": "18.8.3",
-    "@types/react": "18.0.9"
-  },
-  "peerDependenciesMeta": {
-    "@types/node": {
-      "optional": true
-    },
-    "@types/react": {
-      "optional": true
-    }
-  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "5.54.0",
     "@typescript-eslint/parser": "5.54.0",
+    "semistandard": "16.0.1",
     "eslint": "8.35.0",
-    "rimraf": "4.2.0",
+    "rimraf": "4.3.0",
     "standard": "17.0.0",
     "typescript": "4.9.5"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
