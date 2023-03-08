@@ -1,7 +1,12 @@
-import PropTypes from 'prop-types';
 import styles from './styles.module.css';
 
-const Wrapper = ({ label, description, children }) => (
+type WrapperProps = {
+  label?: string;
+  description?: string;
+  children: JSX.Element;
+};
+
+export const Wrapper = ({ label, description, children }: WrapperProps) => (
   <div className={styles.item}>
     {label && <label className={styles.label}>{label}:</label>}
     <div className={label ? styles.itemValue : styles.itemValueWithoutLabel}>
@@ -10,11 +15,3 @@ const Wrapper = ({ label, description, children }) => (
     </div>
   </div>
 );
-
-Wrapper.propTypes = {
-  label: PropTypes.string,
-  description: PropTypes.string,
-  children: PropTypes.any
-};
-
-export default Wrapper;

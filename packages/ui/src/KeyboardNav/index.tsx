@@ -6,14 +6,15 @@ import { focusableSelector } from '../focusableSelector';
  *   If `index` >= `elements.length` then first element is selected;
  *   If `index` <= 0 then last element is selected.
  */
-const moveSelectionTo = (elements: Array<HTMLElement>, index: number) => {
+// eslint-disable-next-line no-undef
+const moveSelectionTo = (elements: NodeListOf<any>, index: number) => {
   let nextIndex = index;
   if (index < 0) {
     nextIndex = elements.length - 1;
   } else if (index >= elements.length) {
     nextIndex = 0;
   }
-  elements[nextIndex].focus();
+  elements[nextIndex]?.focus();
 };
 
 const vimKeyCodes = {
@@ -34,7 +35,7 @@ const isVimMode = (event: React.KeyboardEvent<HTMLDivElement>) => (key: string) 
  * @param  {KeyboardEvent} event
  */
 const onKeyDown = (wrapper: React.RefObject<HTMLDivElement>, event: React.KeyboardEvent<HTMLDivElement>) => {
-  const { target, keyCode, code } = event;
+  const { target, code } = event;
 
   const isVimKey = isVimMode(event);
 
@@ -61,11 +62,11 @@ const onKeyDown = (wrapper: React.RefObject<HTMLDivElement>, event: React.Keyboa
   // Get index of currently focused element
   const index = Array.prototype.findIndex.call(focusable, (el) => el === target);
 
-  if (keyCode === 40 || isVimKey('j')) {
+  if (code === 'ArrowDown' || isVimKey('j')) {
     // Select next focusable element when arrow down clicked
     moveSelectionTo(focusable, index + 1);
     event.stopPropagation();
-  } else if (keyCode === 38 || isVimKey('k')) {
+  } else if (code === 'ArrowUp' || isVimKey('k')) {
     // Select previous focusable element when arrow down clicked
     moveSelectionTo(focusable, index - 1);
     event.stopPropagation();

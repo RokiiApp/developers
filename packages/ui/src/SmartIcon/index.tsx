@@ -1,5 +1,5 @@
-import FileIcon from '../FileIcon';
-import { memoize } from 'cerebro-tools';
+import { memo } from 'react';
+import { FileIcon } from '../FileIcon';
 import FontAwesome from 'react-fontawesome';
 
 /**
@@ -33,4 +33,4 @@ const SmartIconComponent = ({ className, path }: { className?: string, path: str
       : <FileIcon path={path} className={className} />
   );
 };
-export const SmartIcon = memoize(SmartIconComponent);
+export const SmartIcon = memo(SmartIconComponent);

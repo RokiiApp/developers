@@ -23,20 +23,16 @@
   "dependencies": {
     "@electron/remote": "2.0.9",
     "cerebro-build": "^1.2.0",
-    "cerebro-tools": "0.1.8",
-    "prop-types": "15.8.1",
+    "just-memoize": "2.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-fontawesome": "1.7.1",
-    "react-select": "3.2.0",
-    "simple-plist": "1.1.0"
+    "react-select": "5.7.0"
   },
   "devDependencies": {
     "@cerebroapp/cerebro-scripts": "1.0.0-alpha.6",
-    "@types/react": "18.0.9",
-    "@types/react-fontawesome": "1.6.5"
-  },
-  "peerDependencies": {
-    "electron": "20.2.0"
+    "@types/react": "18.0.28",
+    "@types/react-fontawesome": "1.6.5",
+    "electron": "23.1.3"
   }
 }

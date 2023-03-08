@@ -1,9 +1,8 @@
 import { app } from '@electron/remote';
-import { memoize } from 'cerebro-tools';
+import memoize from 'just-memoize';
 
 /**
  * Get system icon for file
- *
  * @param path File path
  */
 
