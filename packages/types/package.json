@@ -9,7 +9,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "rimraf dist && tsc"
+    "build": "rimraf dist && tsc",
+    "lint": "eslint --cache --fix ."
   },
   "author": "David Jiménez",
   "license": "MIT",

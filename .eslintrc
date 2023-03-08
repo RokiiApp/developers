@@ -9,7 +9,8 @@
   ],
   "root": true,
   "rules": {
-    "@typescript-eslint/no-namespace": "off"
+    "@typescript-eslint/no-namespace": "off",
+    "no-undef": "off"
   },
   "globals": {
     "React": true,

@@ -6,7 +6,6 @@ import { focusableSelector } from '../focusableSelector';
  *   If `index` >= `elements.length` then first element is selected;
  *   If `index` <= 0 then last element is selected.
  */
-// eslint-disable-next-line no-undef
 const moveSelectionTo = (elements: NodeListOf<any>, index: number) => {
   let nextIndex = index;
   if (index < 0) {

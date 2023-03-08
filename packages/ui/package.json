@@ -18,6 +18,7 @@
   },
   "scripts": {
     "build": "cerebro-build build",
+    "lint": "eslint --cache --fix .",
     "prepublish": "pnpm build"
   },
   "dependencies": {
