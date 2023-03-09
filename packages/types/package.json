@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Types for Rokii Plugin Developers",
-  "repository": "RokiiApp/developers",
   "types": "dist/index.d.ts",
+  "repository": "RokiiApp/developers",
   "files": [
     "dist"
   ],

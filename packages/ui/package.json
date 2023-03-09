@@ -1,8 +1,10 @@
 {
   "name": "@rokii/ui",
   "version": "0.0.0",
+  "type": "module",
   "description": "Package with common UI components for Rokii plugins",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "RokiiApp/developers",
   "files": [
     "dist"
@@ -17,9 +19,8 @@
     "url": "https://github.com/rokiapp/developers/issues"
   },
   "scripts": {
-    "build": "cerebro-build build",
-    "lint": "eslint --cache --fix .",
-    "prepublish": "pnpm build"
+    "build": "rimraf dist && cerebro-build build && tsc",
+    "lint": "eslint --cache --fix ."
   },
   "dependencies": {
     "@electron/remote": "2.0.9",
