@@ -1,0 +1,28 @@
+{
+  "name": "@rokii/utils",
+  "version": "0.0.0",
+  "description": "Toolkit for developing Rokii plugins",
+  "main": "dist/index.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "build": "tsc"
+  },
+  "repository": "RokiiApp/developers",
+  "author": "David Jiménez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RokiiApp/developers/issues"
+  },
+  "homepage": "https://github.com/RokiiApp/developers#readme",
+  "dependencies": {
+    "just-memoize": "2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.0",
+    "vitest": "0.29.2"
+  }
+}

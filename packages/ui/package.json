@@ -32,7 +32,6 @@
     "react-select": "5.7.0"
   },
   "devDependencies": {
-    "@cerebroapp/cerebro-scripts": "1.0.0-alpha.6",
     "@types/react": "18.0.28",
     "@types/react-fontawesome": "1.6.5",
     "electron": "23.1.3"

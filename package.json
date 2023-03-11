@@ -5,9 +5,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "keywords": [],
-  "author": "David Jiménez",
-  "license": "MIT",
   "scripts": {
     "lint": "turbo lint",
     "build": "turbo build"
@@ -16,7 +13,7 @@
     "@typescript-eslint/eslint-plugin": "5.54.1",
     "@typescript-eslint/parser": "5.54.1",
     "eslint": "8.35.0",
-    "rimraf": "4.3.1",
+    "rimraf": "4.4.0",
     "semistandard": "16.0.1",
     "standard": "17.0.0",
     "turbo": "1.8.3",
