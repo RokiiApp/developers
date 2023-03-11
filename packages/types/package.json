@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Types for Rokii Plugin Developers",
+  "author": "David Jiménez <dubisdev@gmail.com> (https://dubis.dev)",
   "types": "dist/index.d.ts",
   "repository": "RokiiApp/developers",
   "files": [
@@ -12,7 +13,6 @@
     "build": "rimraf dist && tsc",
     "lint": "eslint --cache --fix ."
   },
-  "author": "David Jiménez",
   "license": "MIT",
   "dependencies": {
     "@types/node": "18.14.6",

@@ -15,5 +15,7 @@
 
 This monorepo includes the following packages:
 
+- [`@rokii/build`](./packages/build/README.md) - Build tools for Rokii Plugin Developers
 - [`@rokii/types`](./packages/types/README.md) - Types for Rokii Plugin Developers
 - [`@rokii/ui`](./packages/ui/README.md) - UI components for Rokii Plugin Developers
+- [`@rokii/utils`](./packages/utils/README.md) - Common tools for Rokii Plugin Developers

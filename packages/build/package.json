@@ -1,17 +1,29 @@
 {
   "name": "@rokii/build",
+  "version": "1.0.0",
+  "description": "Build utilities for Rokii plugins and packages",
+  "author": "David Jiménez <dubisdev@gmail.com> (https://dubis.dev)",
+  "repository": "RokiiApp/developers",
   "type": "module",
-  "version": "0.0.0",
-  "bin": "index.js",
+  "bin": {
+    "rokii-build": "dist/index.js"
+  },
   "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
   "dependencies": {
-    "cross-spawn": "7.0.3",
-    "esbuild": "0.15.5",
-    "esbuild-css-modules-plugin": "2.5.2"
+    "esbuild": "0.17.11",
+    "esbuild-css-modules-plugin": "2.7.1"
   },
+  "devDependencies": {
+    "@types/node": "18.15.0",
+    "typescript": "4.9.5"
+  },
+  "os": [
+    "win32"
+  ],
   "engines": {
-    "node": ">=16"
-  },
-  "repository": "git@github.com:dubisdev/cerebro-build.git",
-  "author": "David Jiménez <dubisdev@gmail.com> (https://dubis.dev)"
+    "node": ">=18"
+  }
 }
