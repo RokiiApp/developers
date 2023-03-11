@@ -7,9 +7,11 @@
   ],
   "scripts": {
     "lint": "turbo lint",
-    "build": "turbo build"
+    "build": "turbo build",
+    "publish-packages": "turbo run lint build && changeset version && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "2.26.0",
     "@typescript-eslint/eslint-plugin": "5.54.1",
     "@typescript-eslint/parser": "5.54.1",
     "eslint": "8.35.0",
