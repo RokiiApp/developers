@@ -1,16 +1,18 @@
+import type { FC } from 'react';
 import styles from './styles.module.css';
 
 type KeyboardNavItemProps = {
+  children?: React.ReactElement | null;
   className?: string;
   /**
    * HTML Tag name to use for the item. Defaults to 'div'.
    */
   tagName?: string;
-  onSelect?: (event?: React.SyntheticEvent) => unknown;
+  onSelect?: (event: React.SyntheticEvent) => unknown;
   onKeyDown?: (event: React.KeyboardEvent) => void;
 };
 
-export const KeyboardNavItem = ({ tagName, ...props }: KeyboardNavItemProps) => {
+export const KeyboardNavItem: FC<KeyboardNavItemProps> = ({ tagName, ...props }) => {
   const className = props.className ? `${styles.item} ${props.className}` : styles.item;
 
   const onSelect = props.onSelect || (() => undefined);
@@ -24,7 +26,7 @@ export const KeyboardNavItem = ({ tagName, ...props }: KeyboardNavItemProps) => 
     const vimO = event.code === 'KeyO' && (event.metaKey || event.ctrlKey);
 
     if (!event.defaultPrevented && (event.key === 'Enter' || vimO)) {
-      onSelect();
+      onSelect(event);
     }
   };
 

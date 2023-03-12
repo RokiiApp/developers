@@ -72,7 +72,7 @@ const onKeyDown = (wrapper: React.RefObject<HTMLDivElement>, event: React.Keyboa
   }
 };
 
-export const KeyboardNav = ({ children }: { children: JSX.Element }) => {
+export const KeyboardNav = ({ children }: { children: React.ReactElement | null }) => {
   const wrapper = useRef<HTMLDivElement>(null);
 
   const onKeyDownHandler: React.KeyboardEventHandler<HTMLDivElement> = (event) => {

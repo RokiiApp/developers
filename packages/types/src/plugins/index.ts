@@ -42,7 +42,7 @@ export type PluginResult = {
      * Function that returns preview for your result.
      * Preview can be an html string or React component
      */
-    getPreview?: () => JSX.Element;
+    getPreview?: () => React.ReactElement | null;
 
     /**
      * Action, that should be executed when user selects your result.

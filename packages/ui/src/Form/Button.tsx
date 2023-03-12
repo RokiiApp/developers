@@ -2,7 +2,7 @@ import styles from './styles.module.css';
 
 type ButtonProps = {
   label?: string;
-  onClick: (target: any) => void;
+  onClick: (target: EventTarget) => void;
   description?: string;
 };
 

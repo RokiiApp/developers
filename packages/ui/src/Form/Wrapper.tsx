@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 type WrapperProps = {
   label?: string;
   description?: string;
-  children: JSX.Element;
+  children: React.ReactElement | null;
 };
 
 export const Wrapper = ({ label, description, children }: WrapperProps) => (

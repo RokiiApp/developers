@@ -1,14 +1,25 @@
-import ReactSelect, { Options } from 'react-select';
+import ReactSelect, { MultiValue, SingleValue } from 'react-select';
 import Creatable from 'react-select/creatable';
 import { Wrapper } from './Wrapper';
 
-type SelectProps = {
+type Option = {
+  value: string;
+  label: string;
+};
+
+type ConditionalProps = {
+  multi?: false,
+  onChange: (newValue: SingleValue<Option>) => void;
+} | {
+  multi: true;
+  onChange: (newValue: MultiValue<Option>) => void;
+}
+
+type SelectProps = ConditionalProps & {
   label?: string;
-  value?: string | number | Array<string | number>;
-  onChange: (value: string | number | readonly (string | number)[]) => void;
+  value?: Option;
   description?: string;
-  options: Array<{ options: Options<string>, label: string } | string | number>;
-  multi?: boolean;
+  options: readonly Option[] | Option[];
   clearable?: boolean;
   creatable?: boolean;
 };
@@ -22,14 +33,13 @@ export const Select = ({ label, value, onChange, description, options, multi, cl
         value={value}
         isClearable={clearable}
         options={options}
-        onChange={newValue => {
-          if (!newValue) return newValue;
-
-          if (Array.isArray(newValue)) {
-            const changedValue = newValue.map(val => val.value);
-            onChange(changedValue);
+        onChange={(newValue) => {
+          if (multi) {
+            onChange(newValue as MultiValue<Option>);
+          } else {
+            if (!newValue) return;
+            onChange(newValue as SingleValue<Option>);
           }
-          onChange(newValue);
         }}
       />
     </Wrapper>
