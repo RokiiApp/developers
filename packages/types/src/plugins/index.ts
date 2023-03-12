@@ -117,7 +117,7 @@ export type PluginModule = {
     /**
      * This field is used for autocomplete. You can prefix your plugin usage by this keyword
      */
-    keyword?: string;
+    keyword?: string | string[];
 
     /**
      * This field is also used for autocomplete and shown as title in results list.
