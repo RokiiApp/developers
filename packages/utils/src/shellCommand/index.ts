@@ -1,10 +1,10 @@
-import { exec } from 'node:child_process';
+import { exec, ExecOptions } from 'node:child_process';
 
 /**
  * Promise-wrapper for shell-script execution
  */
-export const shellCommand = (cmd: string) => {
+export const shellCommand = (cmd: string, options: ExecOptions = {}) => {
   return new Promise((resolve, reject) => {
-    exec(cmd, (error, stdout) => error ? reject(error) : resolve(stdout));
+    exec(cmd, options, (error, stdout) => error ? reject(error) : resolve(stdout));
   });
 };
