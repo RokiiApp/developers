@@ -29,6 +29,23 @@ export const Select = ({ label, value, onChange, description, options, multi, cl
   return (
     <Wrapper label={label} description={description}>
       <Component
+      styles={{
+        singleValue: (provided) => ({
+          ...provided,
+          color: 'var(--preview-input-color)'
+        }),
+        control: (provided) => ({
+          ...provided,
+          backgroundColor: 'var(--preview-input-background)',
+          color: 'var(--main-font-color)'
+        }),
+        option: (provided, state) => ({
+          ...provided,
+          backgroundColor: state.isFocused ? 'var(--selected-result-background)' : 'var(--preview-input-background)',
+          color: 'var(--preview-input-color)'
+        })
+      }}
+        className=''
         isMulti={multi}
         value={value}
         isClearable={clearable}

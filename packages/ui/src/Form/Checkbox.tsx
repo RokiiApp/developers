@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styles from './styles.module.css';
 
 type CheckboxProps = {
@@ -7,19 +8,25 @@ type CheckboxProps = {
   description?: string;
 };
 
-export const Checkbox = ({ label, value, onChange, description }: CheckboxProps) => (
-  <div className={styles.item}>
-    <div className={styles.itemValueWithoutLabel}>
+export const Checkbox = ({ label, value = false, onChange, description }: CheckboxProps) => {
+  const [activated, setActivated] = useState(value);
+
+  const changeValue = (value: boolean) => {
+    setActivated(value);
+    onChange(value);
+  };
+
+  return <div className={styles.item}>
       <label>
         <input
           type="checkbox"
-          checked={value}
-          onChange={({ target }) => onChange(target.checked)}
+          checked={activated}
+          onChange={({ target }) => changeValue(target.checked)}
+          onKeyDown={e => e.key === 'Enter' && changeValue(!activated)}
           className={styles.checkbox}
         />
         {label}
       </label>
       <div className={styles.itemNotice}>{description}</div>
-    </div>
-  </div>
-);
+    </div>;
+};
