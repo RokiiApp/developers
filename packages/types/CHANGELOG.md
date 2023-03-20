@@ -1,5 +1,11 @@
 # @rokii/types
 
+## 2.0.0
+
+### Major Changes
+
+- f4fe0e5: Remove isMigratedPlugins setting
+
 ## 1.0.2
 
 ### Patch Changes
