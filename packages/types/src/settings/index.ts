@@ -11,7 +11,6 @@ export type SettingsSchema = {
   selectOnShow: boolean;
   hideOnBlur: boolean;
   plugins: Record<string, unknown>;
-  isMigratedPlugins: boolean;
   openAtLogin: boolean;
   winPosition: [x: number, y: number];
   proxy?: string;
