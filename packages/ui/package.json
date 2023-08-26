@@ -1,6 +1,6 @@
 {
   "name": "@rokii/ui",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "type": "module",
   "description": "Package with common UI components for Rokii plugins",
   "author": "David Jiménez <dubisdev@gmail.com> (https://dubis.dev)",
