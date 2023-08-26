@@ -4,8 +4,6 @@ export type SettingsSchema = {
   country: string;
   theme: string;
   hotkey: string;
-  showInTray: boolean;
-  firstStart: boolean;
   developerMode: boolean;
   cleanOnHide: boolean;
   selectOnShow: boolean;
@@ -13,7 +11,6 @@ export type SettingsSchema = {
   plugins: Record<string, unknown>;
   openAtLogin: boolean;
   winPosition: [x: number, y: number];
-  proxy?: string;
 };
 
 /**

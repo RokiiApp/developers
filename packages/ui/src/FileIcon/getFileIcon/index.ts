@@ -1,4 +1,4 @@
-import { app } from '@electron/remote';
+import { invoke } from '@tauri-apps/api/tauri';
 import memoize from 'just-memoize';
 
 /**
@@ -7,8 +7,8 @@ import memoize from 'just-memoize';
  */
 
 const getFileIcon = async (path: string) => {
-  const nativeIcon = await app.getFileIcon(path);
-  return nativeIcon.toDataURL();
+  const nativeIcon = await invoke<string>('get_file_icon', { path });
+  return nativeIcon;
 };
 
 export default memoize(getFileIcon);
