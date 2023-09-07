@@ -2,5 +2,9 @@
     "compilerOptions": {
         "jsx": "react",
         "allowUmdGlobalAccess": true
-    }
+    },
+    "lib": [
+        "ES2015",
+        "ES2020"
+    ]
 }
