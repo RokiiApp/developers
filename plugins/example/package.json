@@ -1,0 +1,16 @@
+{
+    "name": "@rokii-plugins/example",
+    "version": "0.0.0",
+    "description": "An example plugin for Rokii",
+    "scripts": {
+        "build": ""
+    },
+    "devDependencies": {
+        "react": "*",
+        "@rokii/build": "workspace:*",
+        "@rokii/types": "workspace:*"
+    },
+    "files": [
+        "dist"
+    ]
+}
