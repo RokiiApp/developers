@@ -2,8 +2,10 @@
     "name": "@rokii-plugins/example",
     "version": "0.0.0",
     "description": "An example plugin for Rokii",
+    "type": "module",
     "scripts": {
-        "build": ""
+        "build": "rokii-build build",
+        "dev": "rokii-build dev"
     },
     "devDependencies": {
         "react": "*",
