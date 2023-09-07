@@ -3,7 +3,8 @@
   "private": true,
   "description": "Utilities for Rokii Developers",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "plugins/*"
   ],
   "scripts": {
     "lint": "turbo lint",
@@ -18,6 +19,17 @@
     "semistandard": "17.0.0",
     "standard": "17.1.0",
     "turbo": "1.10.13",
-    "typescript": "4.9.5"
+    "typescript": "4.9.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "@types/react": "18.2.21"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "$react",
+      "react-dom": "$react-dom",
+      "@types/react": "$@types/react",
+      "typescript": "$typescript"
+    }
   }
 }
