@@ -27,7 +27,7 @@ if (fs.existsSync(symlinkPath)) {
 }
 
 console.log('✅ Create symlink');
-fs.symlinkSync(path.resolve(), symlinkPath, 'junction');
+fs.symlinkSync(path.resolve(), symlinkPath);
 
 // Handle ctrl+c to remove symlink to plugin
 process.on('SIGHUP', removeSymlink);
