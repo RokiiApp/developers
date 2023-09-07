@@ -4,14 +4,16 @@ import url from 'node:url';
 import * as esbuild from 'esbuild';
 import cssModulesPlugin from 'esbuild-css-modules-plugin';
 
-const pkgJson = await import(url.fileURLToPath('package.json'));
+const {
+  default: pkgJson
+} = await import(url.pathToFileURL('package.json').href, { assert: { type: 'json' } });
 
-const appName = 'RoKii';
-const pluginName = pkgJson.name;
+const appName = 'app.rokii.dev';
 
-const windowsPath = path.join(process.env.APPDATA!, appName, 'plugins', 'node_modules', pluginName);
+/** Plugin name without scope */
+const pluginName = pkgJson.name.split('/').pop();
 
-const symlinkPath = windowsPath;
+const symlinkPath = path.join(process.env.APPDATA!, appName, 'plugins', pluginName);
 
 function removeSymlink () {
   console.log('🚮 Removing symlink');
@@ -25,11 +27,7 @@ if (fs.existsSync(symlinkPath)) {
 }
 
 console.log('✅ Create symlink');
-fs.symlinkSync(
-  path.resolve(),
-  symlinkPath,
-  process.platform === 'win32' ? 'junction' : 'file'
-);
+fs.symlinkSync(path.resolve(), symlinkPath, 'junction');
 
 // Handle ctrl+c to remove symlink to plugin
 process.on('SIGHUP', removeSymlink);
@@ -37,7 +35,7 @@ process.on('SIGINT', removeSymlink);
 process.on('SIGTERM', removeSymlink);
 process.on('SIGBREAK', removeSymlink);
 
-console.log('✅ Starting esbuild...');
+console.log('✅ Starting bundler...');
 
 const configFile = url.pathToFileURL('rokii.build.js');
 let config = {};

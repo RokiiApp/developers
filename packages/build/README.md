@@ -12,3 +12,10 @@ Build system for Rokii plugins and packages that uses `esbuild`:
 - CSS modules support
 - Configure your build environment using `rokii.build.js` file
 - 🚄 Fast build time
+
+## Available commands
+
+- `rokii-build clear` - Clear the build directory
+- `rokii-build build` - Package your code for production
+- `rokii-build dev` - Makes your plugin available in Rokii as a debuging plugin.
+- `rokii-build start`- The same as `rokii-build dev`.
