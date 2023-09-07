@@ -136,7 +136,7 @@ export type PluginModule = {
      * This function will be executed in another process and you can receive
      * results using `onMessage` function.
      */
-    initializeAsync?: (callback: (data: any) => void, settings: Record<string, any>) => Promise<void>
+    initializeAsync?: (callback: (data: any) => void, settings: Record<string, any>) => void | Promise<void>
 
     /**
      * Use this function to receive data back from your initializeAsync function.
