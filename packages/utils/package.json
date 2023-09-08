@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/RokiiApp/developers#readme",
   "dependencies": {
-    "just-memoize": "2.2.0"
+    "just-memoize": "2.2.0",
+    "@tauri-apps/api": "1.4.0"
   },
   "devDependencies": {
     "@types/node": "18.16.1",
