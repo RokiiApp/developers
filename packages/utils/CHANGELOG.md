@@ -1,5 +1,11 @@
 # @rokii/utils
 
+## 2.0.0
+
+### Major Changes
+
+- b063aa7: Move to tauri shell API
+
 ## 1.1.1
 
 ### Patch Changes

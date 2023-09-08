@@ -1,5 +1,15 @@
 # @rokii/types
 
+## 3.0.1
+
+### Patch Changes
+
+- 1eeb4f3: Prepare packages for monorepo with plugins
+
+  Also linked dependencies to root package.json so they use the same versions for react, typescript...
+
+- de1feea: Fix initializeAsync type
+
 ## 3.0.0
 
 ### Major Changes

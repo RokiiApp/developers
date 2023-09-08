@@ -1,5 +1,19 @@
 # @rokii/build
 
+## 2.0.0
+
+### Major Changes
+
+- 2426d0e: Update build package to support _only_ the tauri version of Rokii.
+
+  The path to the symlink has changed and also the way we get the name of the plugin (without scope)
+
+### Patch Changes
+
+- 1eeb4f3: Prepare packages for monorepo with plugins
+
+  Also linked dependencies to root package.json so they use the same versions for react, typescript...
+
 ## 1.0.1
 
 ### Patch Changes
