@@ -1,5 +1,8 @@
 import { PluginModule } from '@rokii/types';
 
+export const name: PluginModule['name'] = 'Test Plugin';
+export const keywords: PluginModule['keywords'] = ['test'];
+
 export const fn: PluginModule['fn'] = ({ term, display }) => {
   display({
     title: 'Test Plugin',
