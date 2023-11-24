@@ -1,5 +1,13 @@
 # @rokii/build
 
+## 2.0.1
+
+### Patch Changes
+
+- a701fa2: update important deps (esbuild)
+- 8a89fdc: Update core deps
+- 83ef7eb: Remove css module plugin
+
 ## 2.0.0
 
 ### Major Changes

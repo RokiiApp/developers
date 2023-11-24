@@ -1,6 +1,6 @@
 {
   "name": "@rokii/types",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "type": "module",
   "description": "Types for Rokii Plugin Developers",
   "author": "David Jiménez <dubisdev@gmail.com> (https://dubis.dev)",

@@ -1,5 +1,12 @@
 # @rokii/ui
 
+## 2.0.2
+
+### Patch Changes
+
+- 4cf3e5b: Bundle for vrowser, not node
+- 8a89fdc: Update core deps
+
 ## 2.0.1
 
 ### Patch Changes

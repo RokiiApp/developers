@@ -1,5 +1,15 @@
 # @rokii/types
 
+## 4.0.0
+
+### Major Changes
+
+- cbf4887: Make API consistent and usable for the new rokii
+
+### Patch Changes
+
+- 8a89fdc: Update core deps
+
 ## 3.0.1
 
 ### Patch Changes

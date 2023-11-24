@@ -1,5 +1,11 @@
 # @rokii/utils
 
+## 2.0.1
+
+### Patch Changes
+
+- 8a89fdc: Update core deps
+
 ## 2.0.0
 
 ### Major Changes
