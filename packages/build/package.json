@@ -13,8 +13,8 @@
     "build": "tsc"
   },
   "dependencies": {
-    "esbuild": "0.17.18",
-    "esbuild-css-modules-plugin": "2.7.1"
+    "esbuild": "0.19.7",
+    "esbuild-css-modules-plugin": "3.0.3"
   },
   "devDependencies": {
     "@types/node": "18.16.1",
