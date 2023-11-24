@@ -5,7 +5,7 @@ export type PluginResult = {
     /**
      * Title of your result
      */
-    title: string;
+    title?: string;
 
     /**
      * Subtitle of your result
@@ -78,7 +78,7 @@ export type PluginContext = {
     term: string;
 
     /**
-     *
+     * Two methods to retrieve and update the settings of the plugin.
      */
     config: SettingsHandler;
 
@@ -115,12 +115,12 @@ export type PluginModule = {
     fn: (context: PluginContext) => void | Promise<void>;
 
     /**
-     * This field is used for autocomplete. You can prefix your plugin usage by this keyword
+     * This field is used for autocomplete. The plugin will only be called if the keyword matches.
      */
-    keyword?: string | string[];
+    keywords?: string[];
 
     /**
-     * This field is also used for autocomplete and shown as title in results list.
+     * Used for autocomplete and shown as title in results list if no result title is provided.
      */
     name?: string;
 
