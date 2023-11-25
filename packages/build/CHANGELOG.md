@@ -1,5 +1,11 @@
 # @rokii/build
 
+## 2.0.2
+
+### Patch Changes
+
+- 6a66c39: Use css-modules v2.7 as 3 is broken on windows
+
 ## 2.0.1
 
 ### Patch Changes

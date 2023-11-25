@@ -1,5 +1,11 @@
 # @rokii/ui
 
+## 2.0.3
+
+### Patch Changes
+
+- fa60cc5: fix bundling problems
+
 ## 2.0.2
 
 ### Patch Changes
