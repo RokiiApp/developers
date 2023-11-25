@@ -1,4 +1,5 @@
 import esbuild from 'esbuild';
+import CssModulesPlugin from 'esbuild-css-modules-plugin';
 import url from 'node:url';
 import fs from 'node:fs';
 
@@ -21,6 +22,7 @@ esbuild
     target: 'es2022',
     loader: { '.js': 'jsx', '.png': 'dataurl', '.svg': 'text' },
     outfile: 'dist/index.js',
+    plugins: [CssModulesPlugin()],
     ...config
   })
   .then(() => {

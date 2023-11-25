@@ -2,6 +2,7 @@ import path from 'node:path';
 import fs from 'node:fs';
 import url from 'node:url';
 import * as esbuild from 'esbuild';
+import CssModulesPlugin from 'esbuild-css-modules-plugin';
 
 const {
   default: pkgJson
@@ -14,7 +15,7 @@ const pluginName = pkgJson.name.split('/').pop();
 
 const symlinkPath = path.join(process.env.APPDATA!, appName, 'plugins', pluginName);
 
-function removeSymlink() {
+function removeSymlink () {
   console.log('🚮 Removing symlink');
   fs.unlinkSync(symlinkPath);
 }
@@ -54,6 +55,7 @@ const esbuildCtx = await esbuild
     target: 'es2020',
     loader: { '.js': 'jsx', '.png': 'dataurl', '.svg': 'text' },
     outfile: './dist/index.js',
+    plugins: [CssModulesPlugin()],
     ...config
   });
 
