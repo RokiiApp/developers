@@ -1,6 +1,7 @@
 export const config = {
-  entryPoints: ['./src/index.ts'],
+  entryPoints: ['./src/**/*.ts*'],
+  outdir: 'dist',
+  outfile: undefined,
   format: 'esm',
-  packages: 'external',
-  minify: true
+  packages: 'external'
 };
