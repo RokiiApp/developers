@@ -1,5 +1,11 @@
 # @rokii/ui
 
+## 2.0.4
+
+### Patch Changes
+
+- rename parameter of invoke function and get image from Rokii api
+
 ## 2.0.3
 
 ### Patch Changes
