@@ -3,8 +3,7 @@
   "private": true,
   "description": "Utilities for Rokii Developers",
   "workspaces": [
-    "packages/*",
-    "plugins/*"
+    "packages/*"
   ],
   "scripts": {
     "lint": "turbo lint",

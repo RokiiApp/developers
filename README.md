@@ -1,5 +1,9 @@
 <p align="center">
-    <img width="220" src="https://raw.githubusercontent.com/RokiiApp/developers/main/assets/icon.svg" />
+    <img
+        alt="Rokii logo"
+        width="220"
+        src="https://raw.githubusercontent.com/RokiiApp/developers/main/assets/icon.svg"
+    />
 </p>
 
 <h1 align="center">Rokii Developers</h1>
